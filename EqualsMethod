@@ -1,0 +1,60 @@
+package practice.capgeint;
+
+import java.util.LinkedList;
+import java.util.Objects;
+
+public class EqualsHashCode {
+
+    public static void main(String[] args) {
+
+        Person p1 = new Person("x", "y", "chennai");
+        Person p2 = new Person("x", "y", "chennai");
+        System.out.println(p1.equals(p2));
+
+    }
+}
+
+class Person {
+    String firstName;
+    String lastName;
+    String address;
+
+    public Person(String firstName, String lastName, String address) {
+        firstName = firstName;
+        lastName = lastName;
+        address = address;
+    }
+
+    public boolean equals(Person p) {
+        return Objects.equals(this.firstName, p.firstName) && Objects.equals(this.lastName, p.lastName) &&
+                Objects.equals(this.address, p.address);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
